@@ -1,10 +1,75 @@
 PROFILE
 <br><br>
+<!--This is for displaying existing user profile upon login-->
+<div class="profile-outer-container">
+         
+<div class="row">
+  <div class="col-md-4">
+      <div class="column">Fitness Index {{user.fitness_index}}</div>
+    <div class="img-rounded">
+      <img src="./styles/images/mason.jpg" alt="..." class="img-rounded">
+      <div class="caption">
+        <h3>{{user.profile_name}}</h3>
+        <p>{{user.about}}</p>
+        <p><a href="#" class="btn btn-primary" role="button">Update</a> <a href="#" class="btn btn-default" role="button">Activity</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+      <div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">Running</h4>
+    <p class="list-group-item-text">How many miles did you run today?</p>
+  </a>
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">Sprinting</h4>
+    <p class="list-group-item-text">How many meters did you sprint today?</p>
+  </a>
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">Push-ups</h4>
+    <p class="list-group-item-text">How many push-ups did you do today?</p>
+  </a>
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">Sit-ups</h4>
+    <p class="list-group-item-text">How many sit-ups did you do today?</p>
+  </a>
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">Pacers</h4>
+    <p class="list-group-item-text">How many pacers did you complete today?</p>
+  </a>
+</div>
+  </div>
+  <div class="col-md-4">
+    <div class="list-group">
+  <button type="button" class="list-group-item">Cras justo odio</button>
+  <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+  <button type="button" class="list-group-item">Morbi leo risus</button>
+  <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+  <button type="button" class="list-group-item">Vestibulum at eros</button>
+</div>
+ </div>
+</div>
 
-{{user}}
-<br><br>
+<!--<div class="row">
+<div class="col-md-12">
 
-<input type="text" ng-model="user.name_first">
-<input type="text" ng-model="user.name_last">
-<input type="text" ng-model="user.email">
-<button type="button" ng-click="updateUser(user)">update</button>
+</div>
+</div>-->
+<!--<div class="log-activity" ng-repeat="activity in activities">{{activities}}</div>
+<div class="log-completed">{{completed}}pulls from the last 30 days of completed-activities</div>
+<div>{{allusers}}</div>-->
+</div>
+        <!--<div class="friends">{{users}}this is a feed of friends or all users with user name and fitness-index along with completed-activities</div>-->
+        <!--<div class="update-profile">form to updateUser profile (does this need to go to another page?)-->
+            <!--<input type="text" ng-model="user.name_first">
+            <input type="text" ng-model="user.name_last">
+            <input type="text" ng-model="user.email">
+            -what about the image?
+            <input type="submit" value="Submit" id="input-submit" ng-click="updateUser(user)">
+            (alternative)<button type="button" ng-click="updateUser(user)">update</button>-->
+        <!--</div>-->
+
+
+            
+
+

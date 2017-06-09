@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  background: black no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Lato, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.panel {
+  min-height: 100vh;
+  margin: 0px;
+  margin: 5%;
+  /*margin-left: 10px;
+  margin-right: 10px;*/
+  background: url('./styles/images/Team-of-American-Football-Players.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /*padding: 2em;*/
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.panel:nth-child(2) {
+  background-image: url('./styles/images/lineman.jpg');
+}
+.panel:nth-child(3) {
+  background-image: url('./styles/images/inspirationalquote1.jpg');
+}
+.panel:nth-child(4) {
+  background-image: url('./styles/images/footballplayer.jpg');
+}
+.panel2 {
+  background-image: url('./styles/images/soccerplayer.jpg');
+  background-size: cover;
+  margin: 5%;
+  background-attachment: fixed;
+  display: flex;
+}
+
+.content {
+  width: 100vw;
+  font-size: 40px;
+  text-align: center;
+  /*padding: 20vh;*/
+  background: rgba(0, 0, 0, 0.8);
+  /*border: 1px solid #ccc;*/
+  /*box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.8);*/
+  color: #fff;
+}
+.content2 {
+  width:100vw;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  /*border: 1px solid #ccc;*/
+  /*box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.8);*/
+}
+.content3 {
+  width:100vw;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  /*border: 1px solid #ccc;*/
+  /*box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.8);*/
+}
+.content4 {
+  width:100vw;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  /*border: 1px solid #ccc;*/
+  /*box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.8);*/
+}
+.content5 {
+  
+  min-height: 650px;
+  width:100vw;
+  padding: 10%;
+  background: rgba(255, 255, 255, 0.8);
+  /*border: 1px solid #ccc;*/
+  /*box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.8);*/
+}
+h1 {
+   text-align: center;
+   color: white;
+   text-shadow:(1px 1px 0 rgba(black, 1));
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     border-radius:(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     box-shadow:(0 1px 1px rgba(black, 0.1));
+     resize: none;
+}    
+    /*focus {
+       box-shadow:(0 0px 2px rgba($red, 1)!important);
+}*/
+  
+  #input-submit {
+     color: white; 
+     background: red;
+     cursor: pointer;
+  }
+  /*hover {*/
+       /*box-shadow:(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }*/
+  
+  
+  textarea {
+      height: 126px;
+  }
+
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+/*#social {
+  display: inline-block;
+  padding-top: 5%;
+  color: black;
+   text-shadow:(1px 1px 0 rgba(255, 255, 255, 1));
+}*/
+
+/*.a:icon {
+  border: 2px solid white;
+    :hover {
+        transition: 0.5s ease;
+        transform: scale(1.1);
+        border-color: red;
+    }
+}*/
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

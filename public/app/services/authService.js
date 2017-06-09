@@ -35,6 +35,8 @@ angular.module("app")
 				});
 		};
 
+		
+
 		this.editUser = function(user) {
 			return $http({
 					method: 'PUT',

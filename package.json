@@ -1,5 +1,5 @@
 {
-  "name": "SANE_Seed_Auth0",
+  "name": "ICANIWILLIMUST",
   "version": "0.0.0",
   "private": false,
   "scripts": {
@@ -20,17 +20,17 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^2.3.2"
   },
-  "description": "This is a fully functional basic SANE stack app seed. It has passport (with Auth0), gulp, and sass capabilities.",
+  "description": "",
   "main": "server/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevSeedlings/SANE_Seed_Auth0.git"
+    "url": "git+https://github.com/dontimoteo21/icaniwillimust.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DevSeedlings/SANE_Seed_Auth0/issues"
+    "url": "https://github.com/dontimoteo21/icaniwillimust/issues"
   },
-  "homepage": "https://github.com/DevSeedlings/SANE_Seed_Auth0#readme"
+  "homepage": "https://github.com/dontimoteo21/icaniwillimust"
 }

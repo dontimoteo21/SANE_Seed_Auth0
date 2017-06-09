@@ -81,6 +81,9 @@ var userCtrl = require('./controllers/userCtrl');
 
 // USER ENDPOINTS //
 app.get('/api/me', userCtrl.me);
+app.get('/api/allusers', userCtrl.getAllUsers);
+app.get('/api/allactivities', userCtrl.getActivities);
+app.get('/api/completed', userCtrl.getCompleted);
 app.put('/api/user/current', isAuthed, userCtrl.updateCurrent);
 
 

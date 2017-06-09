@@ -1,0 +1,20 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  padding: 20px;
+}
+  a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding-right: 5px;
+  }
+  .logo {
+    align-items: center;
+    display: inline-block;
+  }
+  .userLinks {
+    float: right;
+  }
