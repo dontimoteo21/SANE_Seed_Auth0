@@ -15,12 +15,12 @@ module.exports = {
 
 	//GET ALL USERS
 	getAllUsers: function(req, res, next) {
-		db.user.getAllUsers((err, user) => {
+		db.user.getAllUsers((err, allusers) => {
 			// console.log(user)
 			if(err) {
 				throw err
 			}
-			res.status(200).json(user)
+			res.status(200).json(allusers)
 		})
 	},
 
@@ -31,9 +31,18 @@ module.exports = {
 			if(err) {
 				throw err
 			}
-			res.status(200).send(activities)
+			res.status(200).json(activities)
 		})
 
+	},
+
+	getActivitiesByName: function(req, res, next) {
+		db.activities.getActivitiesByName((err, activitiesname) => {
+			if(err) {
+				throw err
+			}
+			res.status(200).json(activitiesname)
+		})
 	},
 
 	//GET ALL COMPLETED ACTIVITIES
@@ -43,9 +52,10 @@ module.exports = {
 			if(err) {
 				throw err
 			}
-			res.status(200).send(completed)
+			res.status(200).json(completed)
 		})
 	},
+
 
 	//UPDATE COMPLETED
 	updateCompleted: function(req, res, next) {

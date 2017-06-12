@@ -1,1 +1,1 @@
-select * from users
+select profile_name from users

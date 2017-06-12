@@ -1,7 +1,7 @@
 // INITILIZE CONTROLLER
 // ============================================================
 angular.module("app")
-	.controller("profileCtrl", function($scope, user, authService, activitiesService, completedService) {
+	.controller("profileCtrl", function($scope, user, authService, activitiesService, completedService, profileService) {
 
 	  // VARIABLES
 	  // ============================================================
@@ -11,18 +11,23 @@ angular.module("app")
 	  // ============================================================
 		$scope.getActivities = activitiesService.getActivities() 
 			.then(function(response) {
-					$scope.activities = response.data
+					$scope.activities = response
 			})
 
 		$scope.getCompleted = completedService.getCompleted()
 			.then(function(response) {
-					$scope.completed = response.data
+					$scope.completed = response
 			})
 
-		// $scope.getAllUsers = authService.getAllusers() 
+		// $scope.getAllUsers = profileService.getAllusers() 
 		// 	.then(function(response) {
 		// 			$scope.allusers = response
 		// 	})
+
+		$scope.getActivitiesByName = activitiesService.getActivitiesByName() 
+			.then(function(response) {
+					$scope.activitiesname = response
+			})
 			 
 		
 		

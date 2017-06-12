@@ -6,6 +6,9 @@
     "start": "node server/index.js"
   },
   "dependencies": {
+    "angular-animate": "^1.6.4",
+    "angular-touch": "^1.6.4",
+    "angular-ui-bootstrap": "^2.5.0",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "express-session": "^1.12.1",

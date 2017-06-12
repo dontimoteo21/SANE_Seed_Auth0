@@ -1,0 +1,1 @@
+select activities_name from activities

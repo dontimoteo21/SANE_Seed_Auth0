@@ -6,4 +6,10 @@ angular.module("app")
                     return response
                 })
         }
+        this.getActivitiesByName = function() {
+            return $http.get('/api/activitiesname')
+                .then(function(response) {
+                    return response
+                })
+        }
     })

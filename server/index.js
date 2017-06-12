@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var massive = require('massive');
 
+
+
+
 // CONFIG //
 var config = require('./config');
 
@@ -84,6 +87,7 @@ app.get('/api/me', userCtrl.me);
 app.get('/api/allusers', userCtrl.getAllUsers);
 app.get('/api/allactivities', userCtrl.getActivities);
 app.get('/api/completed', userCtrl.getCompleted);
+app.get('/api/activitiesname', userCtrl.getActivitiesByName);
 app.put('/api/user/current', isAuthed, userCtrl.updateCurrent);
 
 

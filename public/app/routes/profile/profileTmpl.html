@@ -5,17 +5,80 @@ PROFILE
          
 <div class="row">
   <div class="col-md-4">
-      <div class="column">Fitness Index {{user.fitness_index}}</div>
+      <div class="column"><h3 style="color: #00BFFF">Fitness Index <strong style="color:white">{{user.fitness_index}}</strong></h3></div>
     <div class="img-rounded">
       <img src="./styles/images/mason.jpg" alt="..." class="img-rounded">
       <div class="caption">
         <h3>{{user.profile_name}}</h3>
         <p>{{user.about}}</p>
-        <p><a href="#" class="btn btn-primary" role="button">Update</a> <a href="#" class="btn btn-default" role="button">Activity</a></p>
+        <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Activity</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="text-align:center">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="background-color: #5190ED">Recent User Activity</h4>
+        </div>
+        <div class="modal-body" style="color: #5190ED">
+          <!--<p>{{completed}}</p>-->
+          <ol>
+            <li>100   |   push-ups   |   2017-06-05</li>
+            <li>100   |   sit-ups    |   2017-06-05</li>
+            <li>50    |   pacers     |   2017-06-05</li>
+            <li>1.5   |   running    |   2017-06-05</li>
+            <li>100   |   push-ups   |   2017-06-02</li>
+            <li>100   |   sit-ups    |   2017-06-02</li>
+            <li>50    |   pacers     |   2017-06-02</li>
+            <li>1.5   |   running    |   2017-06-02</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-4">
+</div>
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4" style="text-align: center">
+    <h2>Top 5 Leaderboard</h2>
+   <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Fitness Index</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tom Brady</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Joe Montana</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Mean Joe Greene</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Barry Sanders</td>
+            <td>7</td>
+        </tr>
+    </tbody>
+</table>
+ </div>
+ <div class="col-md-4" style="text-align:center">
+   <h2>Log Activity</h2>
       <div class="list-group">
   <a href="#" class="list-group-item active">
     <h4 class="list-group-item-heading">Running</h4>
@@ -39,25 +102,17 @@ PROFILE
   </a>
 </div>
   </div>
-  <div class="col-md-4">
-    <div class="list-group">
-  <button type="button" class="list-group-item">Cras justo odio</button>
-  <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
-  <button type="button" class="list-group-item">Morbi leo risus</button>
-  <button type="button" class="list-group-item">Porta ac consectetur ac</button>
-  <button type="button" class="list-group-item">Vestibulum at eros</button>
 </div>
- </div>
-</div>
-
+<!--<div class="friends">{{users}}this is a feed of friends or all users with user name and fitness-index along with completed-activities</div>-->
 <!--<div class="row">
 <div class="col-md-12">
 
 </div>
 </div>-->
-<!--<div class="log-activity" ng-repeat="activity in activities">{{activities}}</div>
-<div class="log-completed">{{completed}}pulls from the last 30 days of completed-activities</div>
-<div>{{allusers}}</div>-->
+<!--<div class="log-allusers" style="background-color: yellow">{{allusers}}</div>-->
+<!--<div class="log-activitiesname" style="background-color: purple">{{activitiesname}}</div>
+<div class="log-activity" style="background-color: blue">{{activities}}</div>
+<div class="log-completed" style="background-color: orange">{{completed}}</div>-->
 </div>
         <!--<div class="friends">{{users}}this is a feed of friends or all users with user name and fitness-index along with completed-activities</div>-->
         <!--<div class="update-profile">form to updateUser profile (does this need to go to another page?)-->
