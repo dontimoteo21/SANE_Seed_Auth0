@@ -29,7 +29,7 @@ var app = angular.module("app", ['ui.router'])
 
 		// HOME STATE
 		.state('home', {
-			url: "/home",
+			url: "/",
 			templateUrl: "./app/routes/home/homeTmpl.html",
 			controller: 'homeCtrl',
 			resolve: {
