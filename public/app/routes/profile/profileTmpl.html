@@ -61,7 +61,67 @@ PROFILE
  <div class="col-md-4" style="text-align:center">
    <h2>Log Activity</h2>
   
-  <a class="push_button blue"  ng-repeat="act in activitiesname">{{act.activities_name}}</a>
+  <!--<a class="push_button blue"  ng-repeat="act in activitiesname">{{act.activities_name}}</a>-->
+  <!-- Button trigger modal -->
+<button class="push_button blue" data-toggle="modal" data-target="#myModalNorm" ng-repeat="act in activitiesname">{{act.activities_name}}
+   
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                   Log Activity
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form">
+                  <div class="form-group">
+                    l<h4 class="modal-title" style="background-color: #5190ED">Recent User Activity</h4>>
+                      <input type="text" class="form-control"
+                      id="exampleInputEmail1" placeholder="EnterCount"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Units</label>
+                      <input type="text" class="form-control"
+                          id="exampleInputPassword1" placeholder="Units"/>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox"/> Check me out
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
   
 </div>

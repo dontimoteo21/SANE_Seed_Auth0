@@ -93,7 +93,8 @@ tbody:hover > tr:hover td {
 	color:#FFF;
 	text-decoration:none;
 	line-height:43px;
-	font-family:'Oswald', Helvetica;
+  font-size: 22px;
+	font-family: Lato, sans-serif;
 	display: inline-block;
 	margin: 30px;
 }
@@ -151,4 +152,16 @@ tbody:hover > tr:hover td {
 	background-image:-moz-linear-gradient(top, #63B8FF, #0276FD);
 	background-image:-ms-linear-gradient(top, #63B8FF, #0276FD);
 	background-image:-o-linear-gradient(top, #63B8FF, #0276FD);
+}
+
+modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
 }
