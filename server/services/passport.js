@@ -14,7 +14,7 @@ passport.use(new Auth0Strategy(config.AUTH_CONFIG, function(accessToken, refresh
   db.user.read_email([profile.emails[0].value], function(err, user) {
 
     user = user[0];
-
+    
     // Is there an error?
     if (err) {
       return done(err);

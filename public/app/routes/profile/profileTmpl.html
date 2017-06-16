@@ -7,7 +7,7 @@ PROFILE
   <div class="col-md-4">
       <div class="column"><h3 style="color: #00BFFF">Fitness Index <strong style="color:white">{{user.fitness_index}}</strong></h3></div>
     <div class="img-rounded">
-      <img src="./styles/images/mason.jpg" alt="..." class="img-rounded">
+      <img src="{{user.user_image}}" alt="..." class="img-rounded">
       <div class="caption">
         <h3>{{user.profile_name}}</h3>
         <p>{{user.about}}</p>
@@ -24,17 +24,10 @@ PROFILE
           <h4 class="modal-title" style="background-color: #5190ED">Recent User Activity</h4>
         </div>
         <div class="modal-body" style="color: #5190ED">
-          <!--<p>{{completed}}</p>-->
-          <ol>
-            <li>100   |   push-ups   |   2017-06-05</li>
-            <li>100   |   sit-ups    |   2017-06-05</li>
-            <li>50    |   pacers     |   2017-06-05</li>
-            <li>1.5   |   running    |   2017-06-05</li>
-            <li>100   |   push-ups   |   2017-06-02</li>
-            <li>100   |   sit-ups    |   2017-06-02</li>
-            <li>50    |   pacers     |   2017-06-02</li>
-            <li>1.5   |   running    |   2017-06-02</li>
-          </ol>
+         
+          <ol class="v" ng-repeat="activity in completed">
+            <li>{{activity.profile_name}} | {{activity.units_count}} | {{activity.activities_name}} | {{activity.completed_date | date}}</li>
+          </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -58,61 +51,24 @@ PROFILE
        </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Tom Brady</td>
-            <td>17</td>
-        </tr>
-        <tr>
-            <td>Joe Montana</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Mean Joe Greene</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>Barry Sanders</td>
-            <td>7</td>
+        <tr ng-repeat="player in topfive">
+            <td>{{player.profile_name}}</td>
+            <td>{{player.fitness_index}}</td>
         </tr>
     </tbody>
 </table>
  </div>
  <div class="col-md-4" style="text-align:center">
    <h2>Log Activity</h2>
-      <div class="list-group">
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Running</h4>
-    <p class="list-group-item-text">How many miles did you run today?</p>
-  </a>
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Sprinting</h4>
-    <p class="list-group-item-text">How many meters did you sprint today?</p>
-  </a>
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Push-ups</h4>
-    <p class="list-group-item-text">How many push-ups did you do today?</p>
-  </a>
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Sit-ups</h4>
-    <p class="list-group-item-text">How many sit-ups did you do today?</p>
-  </a>
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Pacers</h4>
-    <p class="list-group-item-text">How many pacers did you complete today?</p>
-  </a>
+  
+  <a href="#" class="push_button blue"  ng-repeat="act in activitiesname">{{act.activities_name}}</a>
+
+  
 </div>
   </div>
 </div>
-<!--<div class="friends">{{users}}this is a feed of friends or all users with user name and fitness-index along with completed-activities</div>-->
-<!--<div class="row">
-<div class="col-md-12">
 
-</div>
-</div>-->
-<!--<div class="log-allusers" style="background-color: yellow">{{allusers}}</div>-->
-<!--<div class="log-activitiesname" style="background-color: purple">{{activitiesname}}</div>
-<div class="log-activity" style="background-color: blue">{{activities}}</div>
-<div class="log-completed" style="background-color: orange">{{completed}}</div>-->
+
 </div>
         <!--<div class="friends">{{users}}this is a feed of friends or all users with user name and fitness-index along with completed-activities</div>-->
         <!--<div class="update-profile">form to updateUser profile (does this need to go to another page?)-->

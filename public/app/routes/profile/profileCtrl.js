@@ -11,12 +11,14 @@ angular.module("app")
 	  // ============================================================
 		$scope.getActivities = activitiesService.getActivities() 
 			.then(function(response) {
-					$scope.activities = response
+					$scope.activities = response.data
 			})
 
 		$scope.getCompleted = completedService.getCompleted()
 			.then(function(response) {
-					$scope.completed = response
+				console.log(response)
+					$scope.completed = response.data
+					
 			})
 
 		// $scope.getAllUsers = profileService.getAllusers() 
@@ -26,8 +28,15 @@ angular.module("app")
 
 		$scope.getActivitiesByName = activitiesService.getActivitiesByName() 
 			.then(function(response) {
-					$scope.activitiesname = response
+					$scope.activitiesname = response.data
 			})
+
+		$scope.getTopFive = profileService.getTopFive()
+			.then(function(response) {
+				$scope.topfive = response.data
+			})
+
+		
 			 
 		
 		

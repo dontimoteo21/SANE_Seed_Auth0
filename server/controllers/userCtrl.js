@@ -24,6 +24,17 @@ module.exports = {
 		})
 	},
 
+	//GET TOP 5
+	getTopFive: function(req, res, next) {
+		console.log("Made it to profile service in server")
+		db.user.getTopFive((err, topfive) => {
+			if(err) {
+				throw err
+			}
+			res.status(200).json(topfive)
+		})
+	},
+
 	//GET ALL ACTIVITIES
 	getActivities: function(req, res, next) {
 		db.activities.getActivities((err, activities) => {
@@ -47,7 +58,8 @@ module.exports = {
 
 	//GET ALL COMPLETED ACTIVITIES
 	getCompleted: function(req, res, next) {
-		db.completed.getCompleted((err, completed) => {
+		
+		db.completed.getCompleted([req.user.users_id],(err, completed) => {
 			//console.log(completed)
 			if(err) {
 				throw err
