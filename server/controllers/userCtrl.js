@@ -69,21 +69,21 @@ module.exports = {
 	},
 
 
-	//UPDATE COMPLETED
-	updateCompleted: function(req, res, next) {
-		var updateCompleted = req.body;
-		updateCompleted.completed_id = req.completed.completed_id;
+	//POSTCOMPLETED
+	// postCompleted: function(req, res, next) {
+	// 	var postCompleted = req.body;
+	// 	updateCompleted.completed_id = req.completed.completed_id;
 
-		db.completed.save(updateCompleted, function(err, completed) {
-			if(err) {
-				console.log('Completed update error', err);
+	// 	db.completed.save(updateCompleted, function(err, completed) {
+	// 		if(err) {
+	// 			console.log('Completed update error', err);
 
-				return res.status(401)
-					.send(err);
-			}
-			res.status(200).json(completed)
-		})
-	},
+	// 			return res.status(401)
+	// 				.send(err);
+	// 		}
+	// 		res.status(200).json(completed)
+	// 	})
+	// },
 
 	// UPDATE CURRENT USER //
 	updateCurrent: function(req, res, next) {
