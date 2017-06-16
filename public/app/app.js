@@ -50,5 +50,5 @@ var app = angular.module("app", ['ui.router'])
 
 	// ASSIGN OTHERWISE
 	// ============================================================
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/');
 });
