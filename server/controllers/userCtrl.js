@@ -26,7 +26,7 @@ module.exports = {
 
 	//GET TOP 5
 	getTopFive: function(req, res, next) {
-		console.log("Made it to profile service in server")
+		// console.log("Made it to profile service in server")
 		db.user.getTopFive((err, topfive) => {
 			if(err) {
 				throw err
